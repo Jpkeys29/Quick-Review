@@ -8,6 +8,5 @@ export default function SideBar() {
             <ul><button>Probaility</button></ul>
             <ul><button>Normal Distribution</button></ul>
         </menu>
-
     </aside>
 }
