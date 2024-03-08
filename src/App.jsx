@@ -18,6 +18,15 @@ function handleAddQuestion() {
     }
   });
 }
+
+let pregunta;
+
+if (selectedQuestion.selectedQuestionId === null) {
+  pregunta = <Questions />
+} else if (selectedQuestion.selectedQuestionId === undefined) {
+  pregunta = <NoTopicSelected onSelectedQuestion={handleAddQuestion} />
+}
+
   return (
     <main className='container'> 
       <header className='header'>
@@ -26,6 +35,7 @@ function handleAddQuestion() {
       </header>
       <SideBar onSelectedQuestion={handleAddQuestion}/>
       <NoTopicSelected />
+      {pregunta}
     </main>
   )
 }
