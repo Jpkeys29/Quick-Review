@@ -24,7 +24,7 @@ function handleAddQuestion() {
         <h1>Statistics Review</h1>
         <p>Click on the Topic of your choice </p>
       </header>
-      <SideBar />
+      <SideBar onSelectedQuestion={handleAddQuestion}/>
       <NoTopicSelected />
     </main>
   )
