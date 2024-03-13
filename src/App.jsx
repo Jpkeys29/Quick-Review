@@ -34,7 +34,7 @@ if (selectedQuestion.selectedQuestionId === null) {
         <p>Click on the Topic of your choice </p>
       </header>
       <SideBar onSelectedQuestion={handleAddQuestion}/>
-      <NoTopicSelected />
+      {/* <NoTopicSelected /> */}
       {pregunta}
     </main>
   )
