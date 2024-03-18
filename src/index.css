@@ -1,11 +1,49 @@
-
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
+#app {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 100rem;
+  text-align: center;
+  border-radius: 6px;
+  background: linear-gradient(#2a2722, #413c35);
+  color: #f4e9d7;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  height: 100vh;
+  color: #495057;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header {
+  display:flex;
   text-align: center;
   margin: 3rem auto;
+  justify-content: center;
+  align-items: center;
+  /* height: 50px; */
+}
+
+/* .header h1 {
+  margin-bottom: 5px;
+} */
+
+.header p {
+  display: block;
 }
 
 #sidebar {
@@ -16,6 +54,17 @@
   border-radius: 6px;
   background: linear-gradient(#e7e4ed, #a08fb4);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar li {
+  display: grid;
+  grid-template-columns: 4.8rem 1fr auto;
+  align-items: center;
+  column-gap: 1.6rem;
+
+  padding: 1.2rem;
+  border-radius: 7px;
+  transition: 0.5s;
 }
 
 button {
@@ -32,8 +81,35 @@ button {
   cursor: pointer;
 }
 
+.card {
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 50rem;
+  border-radius: 6px;
+  background: linear-gradient(#254041, #203031);
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.questions {
+  width: 600px;
+  margin: 100px auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
