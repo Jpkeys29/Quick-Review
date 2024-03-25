@@ -3,25 +3,27 @@ import { DESCRIPT, QUEST } from "./questiArray"
 export default function Questions() {
     return (
         <div className="questions">
-            {QUEST.map( question => (
-                <ul key={question.id}>
-                    <li>
-                        {question.title}
-                    </li>
-                    <p>{question.answer} </p>
-                </ul>
-            ))}
-            {DESCRIPT.map(question => (
-                <ul key={question.id}>
-                    <p>
-                        {question.title}
-                    </p>
-                </ul>
+            <ul>
+                {QUEST.map( question => (
+                    <Question question={question} key={question.id}/>
+                ))}
+            </ul>
+            <ul>
+                {DESCRIPT.map(question => (
+                    <Question question={question} key={question.id}/>
+                ))}
+            </ul>
+        </div>
+    )
+}
 
-            ))}
-
-            {/* {QUEST.map(question => <p key={question.id}>{question.title} {question.answer} </p> )}
-            {DESCRIPT.map(question => <p key={question.id} >{question.title} {question.answer} </p>)}  */}
+function Question({question}) {
+    return (
+        <div>
+            <ul>
+                <h4>{question.title}</h4>
+                <span>{question.answer} </span>
+            </ul>
         </div>
     )
 }
