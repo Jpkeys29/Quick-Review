@@ -5,7 +5,7 @@ export default function SideBar({children, selectedQuestion, onSelectedQuestion}
         <div className="sidebar">
             {children}
             <button onClick={() => onSelectedQuestion(selectedQuestion)}>Experiment Design</button>
-            <button>Descriptive Statistics</button> 
+            <button onClick={() => onSelectedQuestion(selectedQuestion)}>Descriptive Statistics</button> 
         </div>
         )
 }

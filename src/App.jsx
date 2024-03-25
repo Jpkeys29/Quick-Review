@@ -15,11 +15,10 @@ function handleAddQuestion(question) {
     <main > 
       <Header />  
       <div className='app'>
-        <SideBar  selectedQuestion={selectedQuestion} onSelectedQuestion={handleAddQuestion}>
+        <SideBar onSelectedQuestion={handleAddQuestion}>
           <p>Click on the Topic of your choice </p>
-          {selectedQuestion && <Questions />}
         </SideBar>
-        {!selectedQuestion && <NoTopicSelected />}
+        {!selectedQuestion ? <NoTopicSelected /> : <Questions />}
       </div>
     </main>
   )
