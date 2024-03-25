@@ -6,19 +6,16 @@ import NoTopicSelected from './components/NoTopicSelected';
 import { QUEST } from './components/questiArray';
 
 function App() {
-  const[selectedQuestion, setSelectedQuestion] = useState (false);
+  const[topicSelected, setTopicSelected] = useState('');
 
-function handleAddQuestion(question) {
-  setSelectedQuestion((displayQuestion) => !displayQuestion);
-}
   return (
     <main > 
       <Header />  
       <div className='app'>
-        <SideBar onSelectedQuestion={handleAddQuestion}>
+        <SideBar topicSelected={topicSelected} setTopicSelected={setTopicSelected}>
           <p>Topics </p>
         </SideBar>
-        {selectedQuestion ? <Questions /> : <NoTopicSelected />}
+        <Questions topicSelected={topicSelected} setTopicSelected={setTopicSelected}/> 
       </div>
     </main>
   )
