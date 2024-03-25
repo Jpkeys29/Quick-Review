@@ -6,11 +6,10 @@ import NoTopicSelected from './components/NoTopicSelected';
 import { QUEST } from './components/questiArray';
 
 function App() {
-  const[selectedQuestion, setSelectedQuestion] = useState (undefined)
+  const[selectedQuestion, setSelectedQuestion] = useState (false);
 
 function handleAddQuestion(question) {
-  setSelectedQuestion((question)
-  )
+  setSelectedQuestion((displayQuestion) => !displayQuestion);
 }
   return (
     <main > 
@@ -20,6 +19,7 @@ function handleAddQuestion(question) {
           <p>Click on the Topic of your choice </p>
           {selectedQuestion && <Questions />}
         </SideBar>
+        {!selectedQuestion && <NoTopicSelected />}
       </div>
     </main>
   )
