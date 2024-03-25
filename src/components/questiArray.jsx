@@ -43,4 +43,26 @@ export const DESCRIPT =[
         title : 'Why the median is often used to describe salaries?',
         answer : 'The median is resistant, so outliers will not distort the value of the center'
     },
+];
+export const INTROPROB =[
+    {
+        id : 1,
+        title : 'When flipping a coin, the probability of getting tails is 1/2 or 0.5. Does that mean that if you toss a coin 10 times, you would get exactly 5 tails and 5 heads ? Explain',
+        answer : ''
+    },
+    {
+        id : 2,
+        title : 'What type of probability is obtained when using only the totals from a two-way table ',
+        answer : 'Marginal'
+    },
+    {
+        id : 3,
+        title : '',
+        answer : ''
+    },
+    {
+        id : 4,
+        title : '',
+        answer : ''
+    },
 ]

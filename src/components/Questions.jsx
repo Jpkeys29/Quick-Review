@@ -1,4 +1,4 @@
-import { DESCRIPT, QUEST } from "./questiArray"
+import { DESCRIPT, QUEST, INTROPROB } from "./questiArray"
 
 export default function Questions() {
     return (
@@ -10,6 +10,11 @@ export default function Questions() {
             </ul>
             <ul>
                 {DESCRIPT.map(question => (
+                    <Question question={question} key={question.id}/>
+                ))}
+            </ul>
+            <ul>
+                {INTROPROB.map(question => (
                     <Question question={question} key={question.id}/>
                 ))}
             </ul>
