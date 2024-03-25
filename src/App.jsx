@@ -6,41 +6,31 @@ import NoTopicSelected from './components/NoTopicSelected';
 import { QUEST } from './components/questiArray';
 
 function App() {
-  const[selectedQuestion, setSelectedQuestion] = useState ({
-    selectedQuestionId: undefined,
-    // questions: []
-  })
+  const[selectedQuestion, setSelectedQuestion] = useState (undefined)
 
-function handleAddQuestion() {
-  setSelectedQuestion(prevState => {
-    return {
-      ...prevState,
-      selectedQuestionId: null,
-    }
-  });
+function handleAddQuestion(question) {
+  setSelectedQuestion((question)
+  )
 }
-
-let pregunta;
-
-if (selectedQuestion.selectedQuestionId === null) {
-  pregunta = <Questions />
-} else if (selectedQuestion.selectedQuestionId === undefined) {
-  pregunta = <NoTopicSelected />
-}
-
   return (
-    <main> 
-      <header className='header'>
-        <h1>Statistics Review</h1>
-
-        <p>Click on the Topic of your choice </p>
-      </header>
-      <div className='container'>
-        <SideBar  onSelectedQuestion={handleAddQuestion} />
-        {pregunta}
+    <main > 
+      <Header />  
+      <div className='app'>
+        <SideBar  selectedQuestion={selectedQuestion} onSelectedQuestion={handleAddQuestion}>
+          <p>Click on the Topic of your choice </p>
+          {selectedQuestion && <Questions />}
+        </SideBar>
       </div>
     </main>
   )
+}
+
+
+
+
+
+function Header() {
+  return <h1 className='header'>Statistics Review</h1>
 }
 
 export default App
