@@ -1,6 +1,6 @@
 import Questions from "./Questions";
 
-export default function SideBar({children, selectedQuestion, onSelectedQuestion, topicSelected, setTopicSelected}) {
+export default function SideBar({children, topicSelected, setTopicSelected}) {
     return (
         <div className="sidebar">
             {children}

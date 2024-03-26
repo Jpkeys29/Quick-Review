@@ -15,7 +15,7 @@ function App() {
         <SideBar topicSelected={topicSelected} setTopicSelected={setTopicSelected}>
           <p>Topics </p>
         </SideBar>
-        <Questions topicSelected={topicSelected} setTopicSelected={setTopicSelected}/> 
+        {topicSelected ? (<Questions topicSelected={topicSelected} setTopicSelected={setTopicSelected}/>) : <NoTopicSelected/>} 
       </div>
     </main>
   )

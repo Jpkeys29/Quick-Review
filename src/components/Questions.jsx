@@ -1,7 +1,7 @@
 import NoTopicSelected from "./NoTopicSelected"
 import { DESCRIPT, QUEST, INTROPROB } from "./questiArray"
 
-export default function Questions({topicSelected}) {
+export default function Questions({ topicSelected }) {
     const categoryA = <ul>
         {QUEST.map(question => (
             <Question question={question} key={question.id} />
@@ -12,8 +12,8 @@ export default function Questions({topicSelected}) {
         {DESCRIPT.map(question => (
             <Question question={question} key={question.id} />
         ))}
-        
     </ul>
+
     const categoryC = <ul>
         {INTROPROB.map(question => (
             <Question question={question} key={question.id} />
@@ -42,9 +42,6 @@ export default function Questions({topicSelected}) {
             </div>
         )
     }
-
-
-
 }
 
 function Question({ question }) {
