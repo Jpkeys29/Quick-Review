@@ -1,11 +1,24 @@
 import NoTopicSelected from "./NoTopicSelected"
 import { DESCRIPT, QUEST, INTROPROB } from "./questiArray"
+import { useState } from 'react'
+
 
 export default function Questions({ topicSelected }) {
+    const[currentIndex, setCurrentIndex] = useState(0);
+
+    function handleNextQuestion() {
+        setCurrentIndex(current => current + 1);
+    }
+
+    function handlePrevious() {
+        setCurrentIndex(current => current - 1);
+    }
+
     const categoryA = <ul>
-        {QUEST.map(question => (
-            <Question question={question} key={question.id} />
-        ))}
+        <h2> {QUEST[currentIndex].title}</h2>
+        <p>{QUEST[currentIndex].answer}</p> 
+        <button onClick={handleNextQuestion}>Previous</button>
+        <button onClick={handleNextQuestion} disabled={currentIndex === QUEST.length - 1} >Next</button>
     </ul>
 
     const categoryB = <ul>
@@ -19,6 +32,7 @@ export default function Questions({ topicSelected }) {
             <Question question={question} key={question.id} />
         ))}
     </ul>
+
     if (topicSelected === 'A') {
         return (
             <div className="questions">
@@ -47,10 +61,14 @@ export default function Questions({ topicSelected }) {
 function Question({ question }) {
     return (
         <div>
-            <ul>
-                <h4>{question.title}</h4>
-                <span>{question.answer} </span>
-            </ul>
+            <h2>{question.title}</h2>
+            <p>{question.answer} </p>
         </div>
+        // <div>
+        //     <ul>
+        //         <h4>{question.title}</h4>
+        //         <span>{question.answer} </span>
+        //     </ul>
+        // </div>
     )
 }
