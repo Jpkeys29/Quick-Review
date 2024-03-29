@@ -22,15 +22,17 @@ export default function Questions({ topicSelected }) {
     </ul>
 
     const categoryB = <ul>
-        {DESCRIPT.map(question => (
-            <Question question={question} key={question.id} />
-        ))}
+        <h2> {DESCRIPT[currentIndex].title}</h2>
+        <p>{DESCRIPT[currentIndex].answer}</p> 
+        <button onClick={handlePrevious} disabled={currentIndex < 1}>Previous</button>
+        <button onClick={handleNextQuestion} disabled={currentIndex === DESCRIPT.length - 1} >Next</button>
     </ul>
 
     const categoryC = <ul>
-        {INTROPROB.map(question => (
-            <Question question={question} key={question.id} />
-        ))}
+        <h2> {INTROPROB[currentIndex].title}</h2>
+        <p>{INTROPROB[currentIndex].answer}</p> 
+        <button onClick={handlePrevious} disabled={currentIndex < 1}>Previous</button>
+        <button onClick={handleNextQuestion} disabled={currentIndex === INTROPROB.length - 1} >Next</button>
     </ul>
 
     if (topicSelected === 'A') {

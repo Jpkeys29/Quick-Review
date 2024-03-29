@@ -5,7 +5,7 @@ export default function SideBar({children, topicSelected, setTopicSelected}) {
         <div className="sidebar">
             {children}
             
-            <button onClick={() => setTopicSelected('A')}>Experiment Design</button>
+            <button onClick={() => setTopicSelected('A') }>Experiment Design</button>
             <button onClick={() => setTopicSelected('B')}>Descriptive Statistics</button> 
             <button onClick={() => setTopicSelected('C')}>Introduction to Probability</button>
         </div>

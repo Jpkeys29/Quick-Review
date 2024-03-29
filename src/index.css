@@ -4,15 +4,13 @@
   box-sizing: border-box;
 }
 
-#app {
-  margin: 2rem auto;
-  padding: 1rem;
-  max-width: 100rem;
-  text-align: center;
-  border-radius: 6px;
-  background: linear-gradient(#2a2722, #413c35);
-  color: #f4e9d7;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+.app {
+  min-height: 66vh;
+  display: grid;
+  grid-template-columns: 34rem 44rem;
+  column-gap: 4rem;
+  align-items: start;
+  
 }
 
 body {
@@ -38,21 +36,20 @@ body {
   /* height: 50px; */
 }
 
-/* .header h1 {
-  margin-bottom: 5px;
-} */
-
 .header p {
   display: block;
 }
 
-#sidebar {
-  /* margin: 2rem auto; */
-  padding: 1rem;
-  max-width: 20rem;
+.sidebar {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  border-radius: 6px;
-  background: linear-gradient(#e7e4ed, #a08fb4);
+  gap: 0.2rem;
+  font-size: 1.4rem;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+  /* background: linear-gradient(#e7e4ed, #a08fb4); */
+  background: #e7e4ed;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -61,9 +58,8 @@ body {
   grid-template-columns: 4.8rem 1fr auto;
   align-items: center;
   column-gap: 1.6rem;
-
   padding: 1.2rem;
-  border-radius: 7px;
+  border-radius: 2px;
   transition: 0.5s;
 }
 
@@ -72,7 +68,7 @@ button {
   margin-bottom: 1rem;
   border-radius: 4px;
   border: 1px solid #b0a3c3;
-  background: #9e93ac;
+  background: #bcb1cb;
   color: #e5d9f1;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
