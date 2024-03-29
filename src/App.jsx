@@ -12,10 +12,15 @@ function App() {
     <main > 
       <Header />  
       <div className='app'>
-        <SideBar topicSelected={topicSelected} setTopicSelected={setTopicSelected}>
+        <SideBar 
+        topicSelected={topicSelected} 
+        setTopicSelected={setTopicSelected}>
           <p>Topics </p>
         </SideBar>
-        {topicSelected ? (<Questions topicSelected={topicSelected} setTopicSelected={setTopicSelected}/>) : <NoTopicSelected/>} 
+        {topicSelected ? (<Questions 
+        topicSelected={topicSelected} 
+        setTopicSelected={setTopicSelected} 
+       />) : <NoTopicSelected/>} 
       </div>
     </main>
   )

@@ -17,7 +17,7 @@ export default function Questions({ topicSelected }) {
     const categoryA = <ul>
         <h2> {QUEST[currentIndex].title}</h2>
         <p>{QUEST[currentIndex].answer}</p> 
-        <button onClick={handleNextQuestion}>Previous</button>
+        <button onClick={handlePrevious} disabled={currentIndex < 1}>Previous</button>
         <button onClick={handleNextQuestion} disabled={currentIndex === QUEST.length - 1} >Next</button>
     </ul>
 
