@@ -109,3 +109,10 @@ button {
   height: 100vh;
 }
 
+.number {
+  margin-right: 10px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #ced4da;
+}
+
