@@ -21,13 +21,13 @@ export default function Questions({ topicSelected }) {
     }
 
     const categoryA = <ul>
-        {!isOpen ? <h2> {QUEST[currentIndex].title}</h2>:(
-            <p>{QUEST[currentIndex].answer}</p>)  
-        }
+        <h2> {QUEST[currentIndex].title}</h2>
+        
+        {isOpen && <p>{QUEST[currentIndex].answer}</p>}
         <button onClick={handleToggle}>Answer</button>
         <div>
-        {isOpen && <button onClick={handlePrevious} disabled={currentIndex < 1}>Previous</button>}
-        {isOpen && <button onClick={handleNextQuestion} disabled={currentIndex === QUEST.length - 1} >Next</button>}
+        {!isOpen && <button onClick={handlePrevious} disabled={currentIndex < 1}>👈</button>}
+        {!isOpen && <button onClick={handleNextQuestion} disabled={currentIndex === QUEST.length - 1} >👉</button>}
         </div>
     </ul>
 
@@ -68,6 +68,7 @@ export default function Questions({ topicSelected }) {
             </div>
         )
     }
+    
 }
 
 function Question({ question }) {
