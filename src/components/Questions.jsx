@@ -27,7 +27,6 @@ export default function Questions({ topicSelected }) {
 
     const categoryA = <ul>
         <h2> {QUEST[currentIndex].title}</h2>
-        
         {isOpen && <p>{QUEST[currentIndex].answer}</p>}
         <button onClick={handleToggle}>Answer</button>
         <div>
@@ -41,16 +40,22 @@ export default function Questions({ topicSelected }) {
 
     const categoryB = <ul>
         <h2> {DESCRIPT[currentIndex].title}</h2>
-        <p>{DESCRIPT[currentIndex].answer}</p> 
-        <button onClick={handlePrevious} disabled={currentIndex < 1}>Previous</button>
-        <button onClick={handleNextQuestion} disabled={currentIndex === DESCRIPT.length - 1} >Next</button>
+        {isOpen && <p>{DESCRIPT[currentIndex].answer}</p>}
+        <button onClick={handleToggle}>Answer</button>
+        <div>
+            {!isOpen && <button onClick={handlePrevious} disabled={currentIndex < 1}>⬅️</button>}
+            {!isOpen && <button onClick={handleNextQuestion} disabled={currentIndex === DESCRIPT.length - 1} >➡️</button>}
+        </div>
     </ul>
 
     const categoryC = <ul>
         <h2> {INTROPROB[currentIndex].title}</h2>
-        <p>{INTROPROB[currentIndex].answer}</p> 
-        <button onClick={handlePrevious} disabled={currentIndex < 1}>Previous</button>
-        <button onClick={handleNextQuestion} disabled={currentIndex === INTROPROB.length - 1} >Next</button>
+        {isOpen && <p>{INTROPROB[currentIndex].answer}</p>}
+        <button onClick={handleToggle}>Answer</button>
+        <div>
+            {!isOpen && <button onClick={handlePrevious} disabled={currentIndex < 1}>⬅️</button>}
+            {!isOpen && <button onClick={handleNextQuestion} disabled={currentIndex === INTROPROB.length - 1} >➡️</button>}
+        </div>
     </ul>
 
     if (topicSelected === 'A') {
