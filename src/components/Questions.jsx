@@ -4,8 +4,8 @@ import { useState } from 'react'
 
 
 export default function Questions({ topicSelected }) {
-    const[currentIndex, setCurrentIndex] = useState(0);
-    const[isOpen, setIsOpen] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isOpen, setIsOpen] = useState(false);
 
 
     function handleNextQuestion() {
@@ -31,7 +31,7 @@ export default function Questions({ topicSelected }) {
         <button onClick={handleToggle}>Answer</button>
         <div>
             <p className="number">Question Number: {currentIndex + 1} </p>
-            <p className="number">({currentIndex + 1} of {QUEST.length}) </p>
+            <p className="number">({currentIndex + 1}/{QUEST.length}) </p>
             {!isOpen && <button onClick={handlePrevious} disabled={currentIndex < 1}>⬅️</button>}
             {!isOpen && <button onClick={handleNextQuestion} disabled={currentIndex === QUEST.length - 1} >➡️</button>}
         </div>
@@ -43,9 +43,12 @@ export default function Questions({ topicSelected }) {
         {isOpen && <p>{DESCRIPT[currentIndex].answer}</p>}
         <button onClick={handleToggle}>Answer</button>
         <div>
+            <p className="number">Question Number: {currentIndex + 1} </p>
+            <p className="number">({currentIndex + 1}/{QUEST.length}) </p>
             {!isOpen && <button onClick={handlePrevious} disabled={currentIndex < 1}>⬅️</button>}
             {!isOpen && <button onClick={handleNextQuestion} disabled={currentIndex === DESCRIPT.length - 1} >➡️</button>}
         </div>
+        <button onClick={handleReset} >Reset</button>
     </ul>
 
     const categoryC = <ul>
@@ -53,9 +56,12 @@ export default function Questions({ topicSelected }) {
         {isOpen && <p>{INTROPROB[currentIndex].answer}</p>}
         <button onClick={handleToggle}>Answer</button>
         <div>
+            <p className="number">Question Number: {currentIndex + 1} </p>
+            <p className="number">({currentIndex + 1}/{QUEST.length}) </p>
             {!isOpen && <button onClick={handlePrevious} disabled={currentIndex < 1}>⬅️</button>}
             {!isOpen && <button onClick={handleNextQuestion} disabled={currentIndex === INTROPROB.length - 1} >➡️</button>}
         </div>
+        <button onClick={handleReset} >Reset</button>
     </ul>
 
     if (topicSelected === 'A') {
@@ -81,7 +87,7 @@ export default function Questions({ topicSelected }) {
             </div>
         )
     }
-    
+
 }
 
 function Question({ question }) {

@@ -8,6 +8,10 @@ import { QUEST } from './components/questiArray';
 function App() {
   const[topicSelected, setTopicSelected] = useState('');
 
+  function handleStart() {
+    setTopicSelected('');
+  }
+
   return (
     <main > 
       <Header />  
@@ -22,11 +26,10 @@ function App() {
         setTopicSelected={setTopicSelected} 
        />) : <NoTopicSelected/>} 
       </div>
+      {topicSelected && <button onClick={handleStart}>Start</button>}
     </main>
   )
 }
-
-
 
 
 

@@ -33,7 +33,6 @@ body {
   margin: 3rem auto;
   justify-content: center;
   align-items: center;
-  /* height: 50px; */
 }
 
 .header p {
@@ -114,5 +113,10 @@ button {
   font-size: 24px;
   font-weight: 500;
   color: #ced4da;
+}
+
+.active {
+  background-color: #d2c0ed;
+  color: aliceblue;
 }
 
