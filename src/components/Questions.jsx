@@ -26,40 +26,40 @@ export default function Questions({ topicSelected }) {
     }
 
     const categoryA = <ul>
-        <h2> {QUEST[currentIndex].title}</h2>
+        <h5> {QUEST[currentIndex].title}</h5>
         {isOpen && <p>{QUEST[currentIndex].answer}</p>}
         <button onClick={handleToggle}>Answer</button>
         <div>
             <p className="number">Question Number: {currentIndex + 1} </p>
             <p className="number">({currentIndex + 1}/{QUEST.length}) </p>
-            {!isOpen && <button onClick={handlePrevious} disabled={currentIndex < 1}>⬅️</button>}
+            {!isOpen && <button onClick={handlePrevious} disabled={currentIndex < 1}>⬅️ </button>}
             {!isOpen && <button onClick={handleNextQuestion} disabled={currentIndex === QUEST.length - 1} >➡️</button>}
         </div>
         <button onClick={handleReset} >Reset</button>
     </ul>
 
     const categoryB = <ul>
-        <h2> {DESCRIPT[currentIndex].title}</h2>
+        <h3> {DESCRIPT[currentIndex].title}</h3>
         {isOpen && <p>{DESCRIPT[currentIndex].answer}</p>}
         <button onClick={handleToggle}>Answer</button>
         <div>
             <p className="number">Question Number: {currentIndex + 1} </p>
             <p className="number">({currentIndex + 1}/{QUEST.length}) </p>
-            {!isOpen && <button onClick={handlePrevious} disabled={currentIndex < 1}>⬅️</button>}
-            {!isOpen && <button onClick={handleNextQuestion} disabled={currentIndex === DESCRIPT.length - 1} >➡️</button>}
+            {!isOpen && <button onClick={handlePrevious} disabled={currentIndex < 1}>◀︎</button>}
+            {!isOpen && <button onClick={handleNextQuestion} disabled={currentIndex === DESCRIPT.length - 1} >▶︎</button>}
         </div>
         <button onClick={handleReset} >Reset</button>
     </ul>
 
     const categoryC = <ul>
-        <h2> {INTROPROB[currentIndex].title}</h2>
+        <h3> {INTROPROB[currentIndex].title}</h3>
         {isOpen && <p>{INTROPROB[currentIndex].answer}</p>}
         <button onClick={handleToggle}>Answer</button>
         <div>
             <p className="number">Question Number: {currentIndex + 1} </p>
             <p className="number">({currentIndex + 1}/{QUEST.length}) </p>
-            {!isOpen && <button onClick={handlePrevious} disabled={currentIndex < 1}>⬅️</button>}
-            {!isOpen && <button onClick={handleNextQuestion} disabled={currentIndex === INTROPROB.length - 1} >➡️</button>}
+            {!isOpen && <button onClick={handlePrevious} disabled={currentIndex < 1}>◀︎</button>}
+            {!isOpen && <button onClick={handleNextQuestion} disabled={currentIndex === INTROPROB.length - 1} >▶︎</button>}
         </div>
         <button onClick={handleReset} >Reset</button>
     </ul>
@@ -90,11 +90,11 @@ export default function Questions({ topicSelected }) {
 
 }
 
-function Question({ question }) {
-    return (
-        <div>
-            <h2>{question.title}</h2>
-            <p>{question.answer} </p>
-        </div>
-    )
-}
+// function Question({ question }) {
+//     return (
+//         <div>
+//             <h2>{question.title}</h2>
+//             <p>{question.answer} </p>
+//         </div>
+//     )
+// }

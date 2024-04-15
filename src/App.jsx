@@ -15,20 +15,20 @@ function App() {
 
   return (
     <div>
-        <Header />
-      <main >
-        <div className='app'>
+      <Header />
+      <main className='main'>
+        <div>
           <SideBar
             topicSelected={topicSelected}
             setTopicSelected={setTopicSelected}>
             <p>Topics </p>
           </SideBar>
+        {topicSelected && <button onClick={handleStart}>Start</button>}
+        </div>
           {topicSelected ? (<Questions
             topicSelected={topicSelected}
             setTopicSelected={setTopicSelected}
           />) : <NoTopicSelected />}
-        </div>
-        {topicSelected && <button onClick={handleStart}>Start</button>}
       </main>
     </div>
   )
