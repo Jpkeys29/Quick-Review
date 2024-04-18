@@ -32,9 +32,11 @@ export default function Questions({ topicSelected }) {
         <div>
             <p className="number">Question Number: {currentIndex + 1} </p>
             <p className="number">({currentIndex + 1}/{QUEST.length}) </p>
-            {!isOpen && <button onClick={handlePrevious} disabled={currentIndex < 1}>⬅️ </button>}
+            {/* {!isOpen && <button onClick={handlePrevious} disabled={currentIndex < 1}>⬅️ </button>} */}
             {!isOpen && <button onClick={handleNextQuestion} disabled={currentIndex === QUEST.length - 1} >➡️</button>}
         </div>
+        <progress value={currentIndex}  max={4}/>
+
         <button onClick={handleReset} >Reset</button>
     </ul>
 
@@ -90,11 +92,3 @@ export default function Questions({ topicSelected }) {
 
 }
 
-// function Question({ question }) {
-//     return (
-//         <div>
-//             <h2>{question.title}</h2>
-//             <p>{question.answer} </p>
-//         </div>
-//     )
-// }
