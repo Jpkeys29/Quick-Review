@@ -29,13 +29,12 @@ export default function Questions({ topicSelected }) {
         <h5> {QUEST[currentIndex].title}</h5>
         {isOpen && <p>{QUEST[currentIndex].answer}</p>}
         <button onClick={handleToggle}>Answer</button>
-        <div>
+        <div className="progress">
             <p className="number">Question Number: {currentIndex + 1} </p>
+            <progress value={currentIndex+1} max={QUEST.length} className="color" />
             <p className="number">({currentIndex + 1}/{QUEST.length}) </p>
-            {/* {!isOpen && <button onClick={handlePrevious} disabled={currentIndex < 1}>⬅️ </button>} */}
-            {!isOpen && <button onClick={handleNextQuestion} disabled={currentIndex === QUEST.length - 1} >➡️</button>}
+            {!isOpen && <button onClick={handleNextQuestion} disabled={currentIndex === QUEST.length - 1} >▶︎</button>}
         </div>
-        <progress value={currentIndex}  max={4}/>
 
         <button onClick={handleReset} >Reset</button>
     </ul>

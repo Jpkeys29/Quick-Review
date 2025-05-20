@@ -1,34 +1,24 @@
 import { useState } from 'react'
 import './index.css';
-import SideBar from './components/Sidebar';
-import Questions from './components/Questions';
-import NoTopicSelected from './components/NoTopicSelected';
+import { Route, Routes, Link } from 'react-router-dom';
 import { QUEST } from './components/questiArray';
-import Header from './components/Header';
+import { Header } from './components/Header';
+import { Draggable } from './components/Draggable';
+import { NavBar } from './components/NavBar';
+import { Questionnaire } from './components/Questionnaire';
 
 function App() {
   const [topicSelected, setTopicSelected] = useState('');
 
-  function handleStart() {
-    setTopicSelected('');
-  }
-
   return (
     <div>
       <Header />
+      <NavBar />
       <main className='main'>
-        <div>
-          <SideBar
-            topicSelected={topicSelected}
-            setTopicSelected={setTopicSelected}>
-            <p>Topics </p>
-          </SideBar>
-        {topicSelected && <button onClick={handleStart}>Start</button>}
-        </div>
-          {topicSelected ? (<Questions
-            topicSelected={topicSelected}
-            setTopicSelected={setTopicSelected}
-          />) : <NoTopicSelected />}
+        <Routes>
+          <Route path='questionnaire' element={<Questionnaire topicSelected={topicSelected} setTopicSelected={setTopicSelected}/>}/> 
+          <Route path='/' element={<Draggable />}  />
+        </Routes>
       </main>
     </div>
   )

@@ -19,6 +19,11 @@ export const QUEST = [
         title : "Is 'random' desirable in a sample?",
         answer : 'Yes, it decreases the chances of an unrepresentative sample of the population(biased)'
     },
+    {
+        id: 5,
+        title : "A college is divided into Majors and then randomly choosing a sample for each Major. What type of sampling technique as been used?",
+        answer : 'Yes, it decreases the chances of an unrepresentative sample of the population(biased)'
+    }
 
 ];
 
