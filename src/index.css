@@ -128,6 +128,11 @@ progress color {
 
 }
 
+.item.dragging {
+  opacity: 0.5;
+  background: lightcoral;
+}
+
 /* New Product
 * {
     padding: 0;
