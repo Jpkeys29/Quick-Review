@@ -23,7 +23,6 @@ export const Questionnaire = ({topicSelected, setTopicSelected}) => {
             topicSelected={topicSelected}
             setTopicSelected={setTopicSelected}
             />) : <NoTopicSelected />}
-            <Link to="/">Back</Link>
         </div>        
     )
 }
