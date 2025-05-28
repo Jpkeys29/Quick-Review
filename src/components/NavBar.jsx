@@ -4,11 +4,13 @@ import { Questionnaire } from './Questionnaire';
 
 export const NavBar = () => {
     return(
-        <div>
+        <div class='navbar'>
             <Link to="/questionnaire">
             Questions
-          </Link>
+            </Link>
+            <Link to='/'>
+            Roadmap
+            </Link>
         </div>
-
     )
 }
