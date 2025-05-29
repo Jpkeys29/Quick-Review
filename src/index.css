@@ -23,12 +23,23 @@ header h1 {
 
 .main {
   display:flex;
-  outline: 2px dashed red;
+  /* outline: 2px dashed red; */
   width: 1200px;
   height: 800px;
   padding: 2em;
   margin: 0 auto;
   background-color:#36454F;
+}
+
+.sidePage {
+  display:flex;
+  outline: 2px dashed red;
+  width: 500px;
+  height: 200px;
+  padding: 1em;
+  margin: 0 auto;
+  background-color:#353935;
+  opacity: 0.3;
 }
 
 .sidebar {
