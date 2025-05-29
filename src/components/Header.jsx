@@ -1,7 +1,7 @@
 export const Header = () => {
     return (
         <header>
-            <h1>Statistics Quiz</h1>
+            <h1>Statistics Course</h1>
         </header>
     )
 }

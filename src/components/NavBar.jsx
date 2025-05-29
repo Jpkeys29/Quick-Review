@@ -4,7 +4,7 @@ import { Questionnaire } from './Questionnaire';
 
 export const NavBar = () => {
     return(
-        <div class='navbar'>
+        <div className='navbar'>
             <Link to="/questionnaire">
             Questions
             </Link>
